@@ -1,0 +1,47 @@
+myApp.directive("myValue",function(){
+	return {
+          restrict:"C",
+          template:"<div>value is:{{ 2*3}} </div>",
+          link:function(){
+                 console.log("value");		
+		}	
+	}
+
+})
+
+myApp.directive("behaviour",function(){
+	return function(scope,element,attrs){
+            console.log(scope.myVar);
+            element.bind("click",function(){
+                    alert("I am clicked!");		
+		});	
+	}
+})
+
+myApp.directive("drink",function(){
+	return {
+                restrict:"E",
+                //scope:{type:"@" },
+                template:"My order is : {{type}}",
+                link:function(scope,element,attrs){
+                   scope.type=attrs.type;
+		} 
+	}
+})
+
+myApp.directive("drink2",function(){
+	return {
+                restrict:"E",
+                scope:{type2:"=" },
+                template:"My order is : {{type2}}  <input type='text' ng-model='type2'> "
+               	}
+})
+
+myApp.directive("drink3",function(){
+	return {
+                restrict:"E",
+                scope:{type3:"&" },
+                template:"<input type='button' value='click here' ng-click='type3()'>",
+               	}
+})
+

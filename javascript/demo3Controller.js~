@@ -1,0 +1,18 @@
+
+myApp.controller("Demo3Controller",function($scope){
+	$scope.myVar="hello";
+	$scope.jsonResponse=[
+		{name:"author1"},
+		{name:"author2"},
+		{name:"author3"}]
+	$scope.clickCall=function(){ 
+	alert("clicked it");             
+	 } 
+		})
+
+myApp.filter("customFilter",function(){
+return function(text){
+   return text + " custom filter";
+}
+
+})

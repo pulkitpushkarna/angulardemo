@@ -1,0 +1,46 @@
+var demo1 = function($scope,Demo1Constant,Demo1Value,Demo1Factory,Demo1Service){
+	$scope.message="My message";
+	console.log(Demo1Constant.attr);
+	console.log(Demo1Value.attr);
+        console.log(Demo1Factory.getdata());
+	//console.log(Demo1Factory.addedVariable);
+        console.log(Demo1Service.getdata());
+};
+
+myApp.controller("Demo1",["$scope","Demo1Constant","Demo1Value","Demo1Factory","Demo1Service", demo1])
+
+myApp.constant("Demo1Constant",{ attr: "My Value"});
+
+myApp.value("Demo1Value",{attr:"My constant"})
+
+myApp.factory("Demo1Factory",function(){
+var mydata="this is mydata factory";	
+	var data = {};	
+	data.getdata = function(){
+ 			return mydata;		
+		}
+	return data;
+	
+});
+
+var demo1Service = function(d2s) {
+var mydata=d2s.getdata();	
+	
+
+	this.getdata = function(){
+ 			return mydata;		
+		}
+};
+
+myApp.service("Demo1Service", ["Demo2Service", demo1Service]);
+
+myApp.service("Demo2Service",function(){
+var mydata="this is my service 2 after using this.";	
+	
+
+	this.getdata = function(){
+ 			return mydata;		
+		}
+});
+
+
