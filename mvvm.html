@@ -10,9 +10,11 @@
 	
 	<div ng-app="MyApp">
       	<div ng-controller="MyController">
-      		<input type="text" ng-model="">
+      		<input type="text" ng-model="msg">
+			{{msg}}
+	<input type="button" ng-click="call()">
 		</div>
 	</div>
-
+     
 </body>
 </html>
