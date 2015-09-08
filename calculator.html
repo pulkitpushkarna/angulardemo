@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="javascript/angular.min.js"></script>
+	<script type="text/javascript" src="javascript/calculator.js"></script>
+	<title></title>
+
+</head>
+<body ng-app="app">
+	<div ng-controller="CalculatorController">
+
+		<input type="text" ng-model="num">  
+	</br>
+	Num:{{num}}
+	Square: {{square(num)}} 
+	Cube: {{cube(num)}}
+</div>
+</body>
+</html>
