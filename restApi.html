@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<script type="text/javascript" src="javascript/angular.min.js"></script>
+	<script type="text/javascript" src="javascript/restApi.js"></script>
+	<title></title>
+</head>
+<body ng-app="app">
+	<div ng-controller="TaskListController">
+		<div ng-init="getTaskList()">
+			
+		Size: {{taskList.length}}
+
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Priority</th>
+			</tr>
+			<tr ng-repeat="task in taskList">
+				<td>{{task.name}}</td>
+				<td>{{task.priority}}</td>
+			</tr>
+		</table>
+
+		</div>
+	</div>
+
+</body>
+</html>
