@@ -3,7 +3,7 @@ var myApp=angular.module("MyApp",[])
 myApp.directive('userInfo', function() {
 	var directive = {};
 	directive.restrict = 'E';
-	directive.template = "User: <b> {{user.firstName}}</b> <b> {{user.lastName}}</b>";
+	directive.templateUrl = "partials/userinfo-template.html";
 	directive.scope = {
 		user: "=user"
 	}
