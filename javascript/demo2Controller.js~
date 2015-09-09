@@ -1,9 +1,0 @@
-var demo2ControllerCallback=function($scope){
-	$scope.myVar="This is my Var";
-	$scope.type2="Mango Shake";
-	$scope.callIt=function(){
-          alert("Invoked controller method");
-	}
-};
-
-myApp.controller("Demo2Controller",["$scope", demo2ControllerCallback])
