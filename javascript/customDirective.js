@@ -9,6 +9,8 @@ myApp.directive('userInfo', function() {
 	}
 	return directive;
 });
+
+
 myApp.controller("MyController", function($scope, $http) {
 	$scope.pulkit={
 		firstName:"Pulkit",
@@ -19,3 +21,28 @@ myApp.controller("MyController", function($scope, $http) {
 		lastName:"Kapoor"
 	}
 });
+
+
+myApp.directive("attributeDirective",function(){
+  return {
+  	restrict:"E",
+  	template:"<h1>Hello from Attribute Directive </h1>"
+  }
+
+})
+
+myApp.directive("elementDirective",function(){
+  return {
+  	restrict:"A",
+  	template:"<h1>Hello from Element Directive </h1>"
+  }
+
+})
+
+myApp.directive("classDirective",function(){
+  return {
+  	restrict:"C",
+  	template:"<h1>Hello from Class Directive </h1>"
+  }
+
+})
