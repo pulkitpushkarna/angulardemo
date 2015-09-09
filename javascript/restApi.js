@@ -5,7 +5,7 @@ app.service('taskService', function($http) {
 		$http({
 			method: 'POST',
 			url: "http://localhost:8080/worker/task/list",
-			params: {}
+			params: {count:0}
 		}).then(onComplete, onError);	
 	}
 	

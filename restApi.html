@@ -10,9 +10,7 @@
 	<div ng-controller="TaskListController">
 		<div ng-init="getTaskList()">
 			
-		Size: {{taskList.length}}
-
-		<table>
+		<table ng-show="taskList.length>0">
 			<tr>
 				<th>Name</th>
 				<th>Priority</th>
@@ -22,6 +20,10 @@
 				<td>{{task.priority}}</td>
 			</tr>
 		</table>
+
+		<span ng-hide="taskList.length>0">
+			There are no results.
+		</span>
 
 		</div>
 	</div>
