@@ -18,4 +18,8 @@ myApp.controller("MyController", function($scope, $http) {
 		firstName:"Manish",
 		lastName:"Kapoor"
 	}
+	$scope.jeetu={
+		firstName:"Jitendar",
+		lastName:"Singh"
+	}
 });
