@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<script type="text/javascript" src="javascript/angular.min.js"></script>
+	<script type="text/javascript" src="javascript/builtinFilters.js"></script>
+	<title></title>
+</head>
+<body ng-app="app">
+	<div ng-controller="BuiltInFiltersDemoController">
+		<h3> Built-in Filters</h3>
+			<h4>Upper / Lower Case</h4>
+			Name: <input type="text" ng-model="name">
+			</br>
+			Name: {{name }}
+			</br>
+			Name(in Lowercase): {{name | lowercase}}
+			</br>
+			Name(in Uppercase): {{name | uppercase}}
+
+
+			<h4>Currency</h4>
+			Amount: <input type="text" ng-model="amount">
+			</br>
+			{{amount}}
+			</br>
+			{{amount | currency}}
+			</br>
+			{{amount | currency: "Rs."}}
+	</div>
+</body>
+</html>

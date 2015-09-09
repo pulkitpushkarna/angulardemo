@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<script type="text/javascript" src="javascript/angular.min.js"></script>
+	<script type="text/javascript" src="javascript/customFilter.js"></script>
+	<title></title>
+</head>
+<body ng-app="app">
+	<div ng-controller="CustomFiltersDemoController">
+		<h3> Custom Filter</h3>
+			<h4> Reverse Array</h4>
+			Words: {{words}}
+			</br>
+			Words (reversed): {{ words | reverseArray}}
+
+	</div>
+</body>
+</html>
